@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>מחשבון פיננסי</title>
+    <link rel="stylesheet" href="fin.css">
+</head>
+<body>
+    <div class="finance-container">
+        <h1>מחשבון הלוואה</h1>
+        <div class="player-controls">
+    <button onclick="playAudio()">נגן ▶️</button>
+    <button onclick="pauseAudio()">השהה ⏸</button>
+    <button onclick="deleteAudio()">מחק 🗑</button>
+</div>
+        <a href="../math_calc/math.html" class="nav-link">→ חזור למחשבון רגיל</a>
+        
+        <label>סכום (₪):</label>
+        <input type="number" id="loanAmount">
+        
+        <label>ריבית שנתית (%):</label>
+        <input type="number" id="interestRate">
+        
+        <label>החזר חודשי (₪):</label>
+        <input type="number" id="monthlyPayment">
+        
+        <button onclick="calculateLoan()">חשב תקופה</button>
+        <div id="result" class="result-box">התוצאה תופיע כאן</div>
+    </div>
+    <script src="fin.js"></script>
+</body>
+</html>
