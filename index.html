@@ -1,3 +1,67 @@
-<a href="math_calc/math.html">מחשבון מתמטי</a>
-<br>
-<a href="fin_calc/fin.html">מחשבון פיננסי</a>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>מערכת מחשבונים משולבת</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 80%;
+            max-width: 300px;
+        }
+        .nav-link {
+            display: block;
+            padding: 20px;
+            background-color: #0fbcf9;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .nav-link:active {
+            transform: scale(0.95);
+        }
+        .nav-link.finance {
+            background-color: #1e3799;
+        }
+        p {
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>בחר מחשבון</h1>
+
+    <div class="menu-container">
+        <a href="math_calc/math.html" class="nav-link">מחשבון מתמטי</a>
+        <a href="fin_calc/fin.html" class="nav-link finance">מחשבון פיננסי</a>
+    </div>
+
+    <p>הנתונים וההקלטות מסונכרנים בין המחשבונים</p>
+
+</body>
+</html>
