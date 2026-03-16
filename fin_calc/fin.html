@@ -2,31 +2,34 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>מחשבון פיננסי</title>
     <link rel="stylesheet" href="fin.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
     <div class="finance-container">
-        <h1>מחשבון הלוואה</h1>
-        <div class="player-controls">
-    <button onclick="playAudio()">נגן ▶️</button>
-    <button onclick="pauseAudio()">השהה ⏸</button>
-    <button onclick="deleteAudio()">מחק 🗑</button>
-</div>
-        <a href="../math_calc/math.html" class="nav-link">→ חזור למחשבון רגיל</a>
+        <h2>מחשבון החזר הלוואה</h2>
         
-        <label>סכום (₪):</label>
+        <label>סכום ההלוואה:</label>
         <input type="number" id="loanAmount">
-        
+
         <label>ריבית שנתית (%):</label>
-        <input type="number" id="interestRate">
-        
-        <label>החזר חודשי (₪):</label>
+        <input type="number" id="interestRate" value="5">
+
+        <label>החזר חודשי מבוקש:</label>
         <input type="number" id="monthlyPayment">
-        
-        <button onclick="calculateLoan()">חשב תקופה</button>
-        <div id="result" class="result-box">התוצאה תופיע כאן</div>
+
+        <button class="calc-btn" onclick="calculateLoan()">חשב זמן החזר</button>
+
+        <div class="result-box" id="result">התוצאה תופיע כאן</div>
+
+        <div class="player-controls">
+            <button onclick="playAudio()">נגן ▶️</button>
+            <button onclick="pauseAudio()">השהה ⏸</button>
+            <button onclick="deleteAudio()">מחק 🗑️</button>
+        </div>
+
+        <a href="../math_calc/math.html" class="nav-button">למחשבון מתמטי ⮕</a>
     </div>
     <script src="fin.js"></script>
 </body>

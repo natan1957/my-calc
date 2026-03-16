@@ -2,40 +2,41 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>מחשבון רגיל</title>
-    <link rel="stylesheet" href="math.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>מחשבון מתמטי</title>
+    <link rel="stylesheet" href="math.css">
 </head>
 <body>
-    <div class="calculator-container">
-        <h1>מחשבון רגיל</h1>
-        <a href="../fin_calc/fin.html" class="nav-link">עבור למחשבון פיננסי ←</a>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
         
-        <input type="text" id="display" disabled placeholder="0">
-        <div class="audio-controls">
-    <button id="startRec" onclick="startRecording()">הקלט ⏺</button>
-    <button id="stopRec" onclick="stopRecording()" disabled>עצור ⏹</button>
-    <button id="playRec" onclick="playLocalRecording()" disabled>נגן 🔊</button>
-    <button id="delRec" onclick="deleteRecording()">מחק 🗑</button>
-</div>
-        <div class="buttons-grid">
-            <button class="btn-clear" onclick="clearDisplay()">C</button>
-            <button class="btn-op" onclick="appendOperator('/')">÷</button>
-            <button class="btn-op" onclick="appendOperator('*')">×</button>
-            <button class="btn-op" onclick="appendOperator('-')">-</button>
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendOperator('/')">/</button>
+            <button onclick="appendOperator('*')">*</button>
+            <button onclick="appendOperator('-')">-</button>
             <button onclick="appendNumber('7')">7</button>
             <button onclick="appendNumber('8')">8</button>
             <button onclick="appendNumber('9')">9</button>
-            <button class="btn-op" onclick="appendOperator('+')">+</button>
+            <button onclick="appendOperator('+')">+</button>
             <button onclick="appendNumber('4')">4</button>
             <button onclick="appendNumber('5')">5</button>
             <button onclick="appendNumber('6')">6</button>
-            <button class="btn-equal" onclick="calculate()">=</button>
+            <button onclick="calculate()">=</button>
             <button onclick="appendNumber('1')">1</button>
             <button onclick="appendNumber('2')">2</button>
             <button onclick="appendNumber('3')">3</button>
             <button onclick="appendNumber('0')">0</button>
         </div>
+
+        <div class="player-controls">
+            <button id="startRec" onclick="startRecording()">הקלט 🎙️</button>
+            <button id="stopRec" onclick="stopRecording()" disabled>עצור ⏹</button>
+            <button id="playRec" onclick="playLocalRecording()" disabled>נגן 🔊</button>
+            <button onclick="deleteRecording()">מחק 🗑️</button>
+        </div>
+
+        <a href="../fin_calc/fin.html" class="nav-button">למחשבון פיננסי ⮕</a>
     </div>
     <script src="math.js"></script>
 </body>
